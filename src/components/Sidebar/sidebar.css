@@ -4,6 +4,7 @@
     position: fixed;
     left: 0;
     top: 0;
+    z-index: 99;
     background-color: var(--main-bg);
     box-shadow: var(--box-shadow);
 }
@@ -43,7 +44,9 @@
 .sidebar__item-inner:hover {
     color: var(--main-color);
 }
-
+.sidebar__logo-span{
+    color: var(--main-color);
+}
 .sidebar__item-inner.active {
     border-radius: var(--border-radius);
     background-image: linear-gradient(
@@ -52,4 +55,9 @@
         var(--second-color)
     );
     color: var(--txt-white);
+}
+@media screen and (max-width:480px) {
+    .sidebar {
+        display: none;
+    }
 }

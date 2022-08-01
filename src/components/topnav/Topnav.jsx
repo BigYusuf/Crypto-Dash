@@ -53,7 +53,7 @@ const Topnav = () => {
                 />
             </div>
             <div className="topnav__right-item">
-                <Dropdown icon='bx bx-bell' badge='12'
+                <Dropdown icon='bx bx-bell' badge='5'
                     contentData ={notifications}
                     renderItems={(item, index) => renderNotificationItem(item, index)}
                     renderFooter={() => <Link to='/'>View All</Link>}

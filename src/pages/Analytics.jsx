@@ -68,7 +68,7 @@ const topCustomers = {
           "price": "$9,251"
       },
       {
-          "username": "roman l",
+          "username": "roman emmanuel",
           "order": "80",
           "price": "$8,840"
       }

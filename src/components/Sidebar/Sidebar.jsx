@@ -22,7 +22,8 @@ const Sidebar = () => {
   return (
     <div className='sidebar'>
         <div className="sidebar__logo">
-            <img src={logo} alt="company logo" />
+            {/*<img src={logo} alt="company logo" />*/}
+            <h1 className='sidebar__logo' ><span className='sidebar__logo-span'>Admin</span> Suite</h1>
         </div>
         {
             sidebar_items.map((item, index) => (

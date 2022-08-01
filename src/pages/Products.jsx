@@ -2,16 +2,17 @@ import React from 'react'
 
 import Table from '../components/table/Table'
 
-import customerList from '../assets/JsonData/customers-list.json'
+import productList from '../assets/JsonData/product-list.json'
 
-const customerTableHead = [
+const productTableHead = [
     '',
+    'image',
     'name',
-    'email',
-    'phone',
-    'total orders',
-    'total spend',
-    'location',
+    'category',
+    'color',
+    'price',
+    'seller name',
+    'in-stock',
     'action'
 ]
 
@@ -20,12 +21,13 @@ const renderHead = (item, index) => <th key={index}>{item}</th>
 const renderBody = (item, index) => (
     <tr key={index}>
         <td>{item.id}</td>
-        <td>{item.name}</td>
-        <td>{item.email}</td>
-        <td>{item.phone}</td>
-        <td>{item.total_orders}</td>
-        <td>{item.total_spend}</td>
-        <td>{item.location}</td>
+        <td> <img src={item.image} alt=''/></td>
+        <td>{item.product_name}</td>
+        <td>{item.category}</td>
+        <td>{item.color}</td>
+        <td>{item.price}</td>
+        <td>{item.seller_name}</td>
+        <td>{item.in_stock}</td>
         <td>
           <i className="bx bx-pen"></i>
           <i className="bx bx-trash" > </i>
@@ -33,21 +35,21 @@ const renderBody = (item, index) => (
     </tr>
 )
 
-const Customers = () => {
+const Products = () => {
     return (
         <div>
             <h2 className="page-header">
-                customers
+                products
             </h2>
             <div className="row">
                 <div className="col-12">
                     <div className="card">
                         <div className="card__body">
                             <Table
-                                limit='10'
-                                headData={customerTableHead}
+                                limit='7'
+                                headData={productTableHead}
                                 renderHead={(item, index) => renderHead(item, index)}
-                                bodyData={customerList}
+                                bodyData={productList}
                                 renderBody={(item, index) => renderBody(item, index)}
                             />
                         </div>
@@ -58,4 +60,4 @@ const Customers = () => {
     )
 }
 
-export default Customers
+export default Products
